@@ -1,0 +1,28 @@
+/client/amazetalk/node_modules
+/client/amazetalk/.pnp
+/client/amazetalk/.pnp.js
+
+# testing
+/client/amazetalk/coverage
+
+# production
+/client/amazetalk/build
+
+#firebase
+client/amazetalk/firebase.json
+client/amazetalk/.firebase
+client/amazetalk/.firebaserc
+# misc
+client/amazetalk/.env
+/client/amazetalk/.DS_Store
+/client/amazetalk/.env.local
+/client/amazetalk/env
+/client/amazetalk/.env.development.local
+/client/amazetalk/.env.test.local
+/client/amazetalk/.env.production.local
+
+/client/amazetalk/npm-debug.log*
+/client/amazetalk/yarn-debug.log*
+/client/amazetalk/yarn-error.log*
+/server/node_modules
+/server/.env
