@@ -12,6 +12,7 @@
 client/amazetalk/firebase.json
 client/amazetalk/.firebase
 client/amazetalk/.firebaserc
+client/amazetalk/README.md
 # misc
 client/amazetalk/.env
 /client/amazetalk/.DS_Store
