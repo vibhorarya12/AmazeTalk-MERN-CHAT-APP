@@ -43,7 +43,6 @@ const io = require("socket.io")(server, {
   pingTimeout: 60000,
 });
 const onlineUsers = {};
-
 io.on("connection", (socket) => {
   socket.on("setup", (userId) => {
     // Add the user to the onlineUsers list
@@ -52,7 +51,7 @@ io.on("connection", (socket) => {
     socket.emit("connected");
 
     // Notify other users that this user is now online
-    io.emit("user online", userId);
+    io.emit("user online", userId );
   });
 
   socket.on("disconnect", () => {
@@ -64,24 +63,20 @@ io.on("connection", (socket) => {
       delete onlineUsers[userId];
 
       // Notify other users that this user has gone offline
-      io.emit("user offline", userId);
+      io.emit("user offline",  userId );
     }
   });
 
   socket.on("join chat", (room) => {
-    if (room === "65c9bd6eb286731a7a943ccf") {
-      // Log the user's ID when they join this room
-      console.log("User joined room:", socket.id);
-    }
     socket.join(room);
   });
 
-  // Server-side socket event handlers
-  socket.on("typing", (room) => socket.in(room).emit("typing", room));
-  socket.on("stop typing", (room) => socket.in(room).emit("stop typing", room));
+
+ // Server-side socket event handlers
+socket.on("typing", (room) => socket.in(room).emit("typing", room));
+socket.on("stop typing", (room) => socket.in(room).emit("stop typing", room));
 
   socket.on("new message", (newMessageStatus) => {
-    console.log(newMessageStatus);
     var chat = newMessageStatus.chat;
     if (!chat.users) {
       return console.log("chat.users not found");
