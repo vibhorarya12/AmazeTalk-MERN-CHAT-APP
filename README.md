@@ -19,7 +19,7 @@ Welcome to Amazetalk, a real-time chatting web application built using the MERN 
 <img src="./client/amazetalk/screenshot/GroupChat.png" alt="Group Chat" style="max-width: 100%; height: auto;">
 
 ## Real-Time Notifications 🔔
-- AmazeTalk provides instant notifications in real-time, keeping users updated on new messages, mentions, and other important events as they occur, ensuring timely communication and engagement.
+- AmazeTalk provides instant notifications in real-time, keeping users updated on new messages for timely communication and engagement.
 <img align="center" src="./client/amazetalk/screenshot/notifi.png" alt="Image Alt Text" style="width: auto; height: 400px;">
 
 ## Dark Mode 🌚
@@ -43,3 +43,89 @@ Welcome to Amazetalk, a real-time chatting web application built using the MERN 
 - Socket.IO
 ### Authentication
 - JWT (JSON Web Tokens)
+
+# Installation Setup 🧰
+
+To run this project locally, you need to follow these steps:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/vibhorarya12/AmazeTalk-MERN-CHAT-APP.git
+````
+### 2. Install Dependencies for Client
+Navigate to the client folder
+```bash
+cd client/amazetalk
+````
+Install dependencies using npm:
+```bash
+npm install
+````
+### 3. Enviroment variables setup for client
+Navigate
+```bash
+cd client/amazetalk
+````
+create a new .env file
+```bash
+ touch .env && echo REACT_APP_API_KEY=http://localhost:5000 > .env
+````
+### 4. Install Dependencies for Server
+Navigate to the server folder
+```bash
+cd ../..
+cd server
+````
+Install dependencies using npm
+```bash
+ npm install
+````
+### 5. Enviroment variables setup for server
+within server directory create a new .env file
+```bash
+touch .env
+````
+open .env file and add these variables:
+```bash
+PORT = 5000
+DATABASE = Your MongoDb atlas connection string here
+JWT = Awz76234Screet@77
+````
+⚠️Note: for DATABASE variable a mongoDb atlas connection string is required . Please refer to https://www.mongodb.com/docs/guides/atlas/connection-string/
+
+### 6. Run Server
+start the server
+```bash
+npm start
+````
+### 7. Run Client Application
+navigate to client directory
+```bash
+cd ../client/amazetalk
+````
+Start the React app:
+```bash
+npm start
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
